@@ -43,7 +43,7 @@ function MapForm() {
                 </div>
                 <div className="col-xl-5 col-lg-6 m-b30 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">
                     <div className="form-wrapper style-1 m-l40">
-                        <div className="form-body bg-secondary background-blend-burn" style={{ backgroundImage: `url(${IMAGES.bg2})`, backgroundSize: 'cover', backgroundPosition: 'bottom right', }}>
+                        <div className="form-body bg-secondary background-blend-burn" style={{ backgroundImage: `url(${IMAGES.bg2png})`, backgroundSize: 'cover', backgroundPosition: 'bottom right', }}>
                             <div className="section-head style-1 m-b30">
                                 <h2 className="title text-white">Get in Touch <br /> With us</h2>
                             </div>
