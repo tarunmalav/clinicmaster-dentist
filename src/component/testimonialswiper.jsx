@@ -86,6 +86,9 @@ function TestiSwiper() {
                         el: ".testimonial-pagination-swiper2",
                         clickable: true
                     }}
+                    autoplay={{
+                        delay:3000
+                    }}
                     breakpoints={{
                         1481: {
                             slidesPerView: 2,

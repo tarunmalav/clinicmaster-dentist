@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { clientswiperdata } from "../constant/alldata";
+import { Autoplay } from "swiper/modules";
 
 function ClientSwiper({ columnstand1, columnstand2 }) {
     return (
@@ -13,6 +14,9 @@ function ClientSwiper({ columnstand1, columnstand2 }) {
                 <Swiper className="client-swiper2"
                     slidesPerView={4}
                     loop={true}
+                    autoplay={{
+                        delay:3000,
+                    }}
                     breakpoints={{
                         767: {
                             slidesPerView: 4,
@@ -24,6 +28,7 @@ function ClientSwiper({ columnstand1, columnstand2 }) {
                             slidesPerView: 2,
                         },
                     }}
+                    modules={[Autoplay]}
                 >
                     {clientswiperdata.map((data, i) => (
                         <SwiperSlide className="wow bounceIn" data-wow-delay={data.delay} data-wow-duration="0.8s" key={i}>

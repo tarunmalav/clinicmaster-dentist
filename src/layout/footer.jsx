@@ -1,8 +1,21 @@
 import { Link } from "react-router-dom";
 import { IMAGES } from "../constant/theme";
-import { footerdata } from "../constant/alldata";
-
+import { footerdata } from "../constant/alldata";    
+import { useRef } from "react";
+import emailjs from '@emailjs/browser';
 function Footer() {
+    const form = useRef();
+	const sendEmail = (e) => {
+		e.preventDefault();
+		//emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID')
+        emailjs.sendForm('service_61hny88', 'template_vvlidif', e.target, 'd9b2e0f5fc72cb94792110e8ff2028f3-us16')
+		  .then((result) => {
+			  console.log('SUCCESS!',result.text);
+		  }, (error) => {
+			  console.log('FAILED...',error.text);
+		  });
+		  e.target.reset()
+	};	
     return (
         <>
             <footer className="site-footer style-1 footer-dark" style={{ backgroundImage: `url(${IMAGES.bg5})` }}>
@@ -59,7 +72,7 @@ function Footer() {
                                     <p>Get our latest and best contents right into your inbox</p>
                                 </div>
                                 <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">
-                                    <form className="dzSubscribe style-1" action="../assets/script/mailchimp.php" method="post">
+                                    <form className="dzSubscribe style-1"  ref={form} onSubmit={sendEmail}>
                                         <div className="dzSubscribeMsg"></div>
                                         <div className="form-group">
                                             <div className="input-group mb-0">

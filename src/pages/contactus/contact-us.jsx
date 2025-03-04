@@ -5,8 +5,23 @@ import { IMAGES, SVGICONS } from "../../constant/theme";
 import Footer from "../../layout/footer";
 import Header from "../../layout/header";
 import ScrollTopButton from "../../component/scrolltotop";
+import emailjs from '@emailjs/browser';
+import { useRef } from "react";
+
 
 function Contactus() {
+    const form = useRef();
+	const sendEmail = (e) => {
+		e.preventDefault();
+		//emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID')
+        emailjs.sendForm('service_61hny88', '__ejs-test-mail-service__', e.target, 'd9b2e0f5fc72cb94792110e8ff2028f3-us16')
+		  .then((result) => {
+			  console.log('SUCCESS!',result.text);
+		  }, (error) => {
+			  console.log('FAILED...',error.text);
+		  });
+		  e.target.reset()
+	};	
     return (
         <>
             <Header columnstand="header-transparent" />
@@ -58,7 +73,7 @@ function Contactus() {
                                             <h2 className="title">Ask a Question</h2>
                                             <p>If you have any questions, you can contact us. Please, fill out the form below.</p>
                                         </div>
-                                        <form action="../assets/script/contact_smtp.php" className="dzForm row" method="POST">
+                                        <form  ref={form} onSubmit={sendEmail} className="dzForm row" method="POST">
                                             <input type="hidden" className="form-control" name="dzToDo" value="Contact" />
                                             <input type="hidden" className="form-control" name="reCaptchaEnable" value="0" />
                                             <div className="dzFormMsg"></div>

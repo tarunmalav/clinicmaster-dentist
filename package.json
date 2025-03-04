@@ -11,6 +11,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "emailjs": "^4.0.3",
     "lightgallery": "^2.8.2",
     "react": "^19.0.0",
     "react-before-after-slider-component": "^1.1.8",

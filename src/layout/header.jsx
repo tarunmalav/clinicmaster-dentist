@@ -78,12 +78,18 @@ function Header({ columnstand }) {
                                         if (menuClass === 'has-mega-menu') {
                                             return (
                                                 <li key={i} className={`has-mega-menu sub-menu-down auto-width menu-left ${i == isActive ? 'open' : ''}`} >
-                                                    <Link onClick={() => menuHandler(i)} to={"#"}> <span>{data.title}</span> <i className="fas fa-chevron-down tabIndex" /> </Link>
+                                                    <Link onClick={() => menuHandler(i)} to={data.to}> 
+                                                        <span>{data.title}</span> 
+                                                        <i className="fas fa-chevron-down tabIndex" /> 
+                                                    </Link>
                                                     <div className="mega-menu">
                                                         <ul className="demo-menu">
                                                             {data.content.map((item, index) => (
                                                                 <li key={index}>
-                                                                    <Link to={item.link}> <img src={item.image} alt={item.title} /> <span className="menu-title">{item.title}</span> </Link>
+                                                                    <Link to={item.to}> 
+                                                                        <img src={item.image} alt={item.title} /> 
+                                                                        <span className="menu-title">{item.title}</span>
+                                                                    </Link>
                                                                 </li>
                                                             ))}
                                                         </ul>

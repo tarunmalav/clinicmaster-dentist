@@ -17,12 +17,14 @@ import BlogGrid from "../pages/blog/blog-grid";
 import BlogListSidebar from "../pages/blog/blog-list-sidebar";
 import BlogDetail from "../pages/blog/blog-details";
 import Contactus from "../pages/contactus/contact-us";
+import Scroll from "../component/scroll";
 
 function Root() {
     return (
         <>
             <div className="page-wraper">
                 <BrowserRouter>
+                    <Scroll/>
                     <Routes>
                         <Route path="/" element={<Index />} />
                         <Route path="about-us" element={<AboutUs />} />

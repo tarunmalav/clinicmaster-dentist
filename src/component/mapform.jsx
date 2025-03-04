@@ -1,6 +1,20 @@
+import { useRef } from "react";
 import { IMAGES } from "../constant/theme";
+import emailjs from '@emailjs/browser';
 
-function MapForm() {
+function MapForm() { 
+    const form = useRef();
+	const sendEmail = (e) => {
+		e.preventDefault();
+		//emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID')
+        emailjs.sendForm('service_61hny88', '__ejs-test-mail-service__', e.target, 'd9b2e0f5fc72cb94792110e8ff2028f3-us16')
+		  .then((result) => {
+			  console.log('SUCCESS!',result.text);
+		  }, (error) => {
+			  console.log('FAILED...',error.text);
+		  });
+		  e.target.reset()
+	};	 
     return (
         <>
             <div className="row">
@@ -47,7 +61,7 @@ function MapForm() {
                             <div className="section-head style-1 m-b30">
                                 <h2 className="title text-white">Get in Touch <br /> With us</h2>
                             </div>
-                            <form action="../assets/script/contact_smtp.php" className="dzForm row" method="POST">
+                            <form  ref={form} onSubmit={sendEmail}className="dzForm row" method="POST">
                                 <input type="hidden" className="form-control" name="dzToDo" value="Contact" />
                                 <input type="hidden" className="form-control" name="reCaptchaEnable" value="0" />
                                 <div className="dzFormMsg"></div>

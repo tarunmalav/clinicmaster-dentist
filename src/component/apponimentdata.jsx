@@ -1,13 +1,27 @@
 import { IMAGES } from "../constant/theme";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Dropdown } from "react-bootstrap";
+import emailjs from '@emailjs/browser';
+
 
 function AppointmentData() {
     const [startDate, setStartDate] = useState(new Date());
     const [selectCat, setSelectCat] = useState("Department");
     const [selectCatt, setSelectCatt] = useState("Doctor Name");
+    const form = useRef();
+	const sendEmail = (e) => {
+		e.preventDefault();
+		//emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID')
+        emailjs.sendForm('service_61hny88', '__ejs-test-mail-service__', e.target, 'd9b2e0f5fc72cb94792110e8ff2028f3-us16')
+		  .then((result) => {
+			  console.log('SUCCESS!',result.text);
+		  }, (error) => {
+			  console.log('FAILED...',error.text);
+		  });
+		  e.target.reset()
+	};	
     return (
         <>
             <div className="row">
@@ -18,7 +32,7 @@ function AppointmentData() {
                         </div>
                         <div className="form-wrapper">
                             <div className="form-body">
-                                <form action="../assets/script/contact_smtp.php" className="dzForm" method="POST">
+                                <form ref={form} onSubmit={sendEmail} className="dzForm" method="POST">
                                     <input type="hidden" className="form-control" name="dzToDo" value="Appointment" />
                                     <input type="hidden" className="form-control" name="reCaptchaEnable" value="0" />
                                     <div className="dzFormMsg"></div>
@@ -38,19 +52,15 @@ function AppointmentData() {
                                             </div>
                                         </div>
                                         <div className="col-xl-4 col-sm-6 m-b10 wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="0.8s">
-                                            <div className="form-floating floating-outline input-light">
-                                                <div className="input-group">
-                                                    <DatePicker className="form-control" selected={startDate}
-                                                        onChange={(date) => setStartDate(date)}
-                                                        placeholderText="Date Time"
-                                                        dateFormat="Pp"
-                                                    >
-                                                        <label htmlFor="dateTimePickerOnly">Date Time</label>
-                                                        <span className="input-group-text">
-                                                            <i className="feather icon-calendar" />
-                                                        </span>
-                                                    </DatePicker>
-                                                </div>
+                                            
+                                            <div className="form-floating floating-outline input-light base-calender">
+                                                <DatePicker className="form-control" selected={startDate}
+                                                    onChange={(date) => setStartDate(date)}
+                                                    placeholderText="Date Time"
+                                                    dateFormat="Pp"
+                                                >
+                                                </DatePicker>
+                                                <span className="input-group-text"><i className="feather icon-calendar"/></span>
                                             </div>
                                         </div>
                                         <div className="col-xl-4 col-sm-6 m-b10 wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="0.8s">
