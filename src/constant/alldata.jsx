@@ -20,7 +20,7 @@ export const menudata = [
             { title: "Appointment", to: "/appointment" },
             { title: "Pricing Table", to: "/pricing-table" },
             { title: "Testimonial", to: "/testimonial" },
-            { title: "Faqs", to: "/faqs" },
+            { title: "Faq's", to: "/faqs" },
             { title: "Error 404", to: "/error-404" },
         ],
     },
