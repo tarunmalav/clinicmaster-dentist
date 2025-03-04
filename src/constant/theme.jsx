@@ -209,7 +209,7 @@ export const IMAGES = {
     demohome1: demohome1,
     demohome2: demohome2,
     demohome3: demohome3,
-    bg2png:bg2png,
+    bg2png: bg2png,
 }
 export const SVGICONS = {
     smile: <svg width="207" height="44" viewBox="0 0 207 44" fill="none" xmlns="http://www.w3.org/2000/svg">
