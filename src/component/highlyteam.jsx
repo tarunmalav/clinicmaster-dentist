@@ -91,11 +91,11 @@ function HighlyTeam() {
                                         </div>
                                         <div className="dz-footer">
                                             <ul className="dz-social">
-                                                <li><Link to="https://www.linkedin.com" target="_blank"><i className="fa-brands fa-linkedin" /></Link></li>
-                                                <li><Link to="https://www.instagram.com" target="_blank"><i className="fa-brands fa-instagram" /></Link></li>
-                                                <li><Link to="https://www.facebook.com" target="_blank"><i className="fa-brands fa-facebook-f" /></Link></li>
-                                                <li><Link to="https://twitter.com" target="_blank"><i className="fa-brands fa-x-twitter" /></Link></li>
-                                                <li><Link to="https://www.youtube.com" target="_blank"><i className="fa-brands fa-youtube" /></Link></li>
+                                                <li><Link to="https://www.linkedin.com/showcase/dexignzone" target="_blank"><i className="fa-brands fa-linkedin" /></Link></li>
+                                                <li><Link to="https://www.instagram.com/dexignzone" target="_blank"><i className="fa-brands fa-instagram" /></Link></li>
+                                                <li><Link to="https://www.facebook.com/dexignzone" target="_blank"><i className="fa-brands fa-facebook-f" /></Link></li>
+                                                <li><Link to="https://www.x.com/dexignzone" target="_blank"><i className="fa-brands fa-x-twitter" /></Link></li>
+                                                <li><Link to="https://www.linkedin.com/@dexignzone" target="_blank"><i className="fa-brands fa-youtube" /></Link></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -118,7 +118,10 @@ function HighlyTeam() {
                             nextEl: '.team-swiper-next',
                             prevEl: '.team-swiper-prev',
                         }}
-                        modules={[Pagination, Navigation, FreeMode, Thumbs, EffectFade]}
+                        autoplay={{
+                            delay: 3000,
+                        }}
+                        modules={[Pagination, Navigation, FreeMode, Thumbs, EffectFade,Autoplay]}
                         ref={teamSwiperRef}
                         onSwiper={setSwiperInstance}
                     >
@@ -130,10 +133,10 @@ function HighlyTeam() {
                                             <img src={data.image2} alt="/" />
                                         </div>
                                         <ul className="dz-social">
-                                            <li><Link to="https://www.linkedin.com" target="_blank" className="linkedin"><i className="fa-brands fa-linkedin" /></Link></li>
-                                            <li><Link to="https://www.instagram.com" target="_blank" className="instagram"><i className="fa-brands fa-instagram" /></Link></li>
-                                            <li><Link to="https://www.facebook.com" target="_blank" className="facebook"><i className="fa-brands fa-facebook-f" /></Link></li>
-                                            <li><Link to="https://twitter.com" target="_blank" className="x-twitter"><i className="fa-brands fa-x-twitter" /></Link></li>
+                                            <li><Link to="https://www.linkedin.com/showcase/dexignzone" target="_blank" className="linkedin"><i className="fa-brands fa-linkedin" /></Link></li>
+                                            <li><Link to="https://www.instagram.com/dexignzone" target="_blank" className="instagram"><i className="fa-brands fa-instagram" /></Link></li>
+                                            <li><Link to="https://www.facebook.com/dexignzone" target="_blank" className="facebook"><i className="fa-brands fa-facebook-f" /></Link></li>
+                                            <li><Link to="https://www.x.com/dexignzone" target="_blank" className="x-twitter"><i className="fa-brands fa-x-twitter" /></Link></li>
                                         </ul>
                                         <div className="item1">
                                             <ul className="list-check-try fw-medium text-secondary">

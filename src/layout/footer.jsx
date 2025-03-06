@@ -102,11 +102,11 @@ function Footer() {
                                 </div>
                                 <div className="col-lg-6 col-md-12 text-end">
                                     <ul className="nav-inline">
-                                        <li> <Link to="https://www.linkedin.com" target="_blank"><i className="fa-brands fa-linkedin" /> </Link> </li>
-                                        <li> <Link to="https://www.instagram.com" target="_blank"><i className="fa-brands fa-instagram" /> </Link> </li>
-                                        <li> <Link to="https://www.facebook.com" target="_blank"><i className="fa-brands fa-facebook-f" /> </Link> </li>
-                                        <li> <Link to="https://twitter.com" target="_blank"><i className="fa-brands fa-x-twitter" /> </Link> </li>
-                                        <li> <Link to="https://www.youtube.com" target="_blank"><i className="fa-brands fa-youtube" /> </Link> </li>
+                                        <li> <Link to="https://www.linkedin.com/showcase/dexignzone" target="_blank"><i className="fa-brands fa-linkedin" /> </Link> </li>
+                                        <li> <Link to="https://www.instagram.com/dexignzone" target="_blank"><i className="fa-brands fa-instagram" /> </Link> </li>
+                                        <li> <Link to="https://www.facebook.com/dexignzone" target="_blank"><i className="fa-brands fa-facebook-f" /> </Link> </li>
+                                        <li> <Link to="https://www.x.com/dexignzone" target="_blank"><i className="fa-brands fa-x-twitter" /> </Link> </li>
+                                        <li> <Link to="https://www.linkedin.com/@dexignzone" target="_blank"><i className="fa-brands fa-youtube" /> </Link> </li>
                                     </ul>
                                 </div>
                             </div>

@@ -66,10 +66,10 @@ function BlogDetail() {
                                     </div>
                                     <div className="dz-social-icon primary-light">
                                         <ul>
-                                            <li><Link to="https://www.linkedin.com" target="_blank"><i className="fa-brands fa-linkedin" /></Link></li>
-                                            <li><Link to="https://www.instagram.com" target="_blank"><i className="fa-brands fa-instagram" /></Link></li>
-                                            <li><Link to="https://www.facebook.com" target="_blank"><i className="fa-brands fa-facebook-f" /></Link></li>
-                                            <li><Link to="https://twitter.com" target="_blank"><i className="fa-brands fa-x-twitter" /></Link></li>
+                                            <li><Link to="https://www.linkedin.com/showcase/dexignzone" target="_blank"><i className="fa-brands fa-linkedin" /></Link></li>
+                                            <li><Link to="https://www.instagram.com/dexignzone" target="_blank"><i className="fa-brands fa-instagram" /></Link></li>
+                                            <li><Link to="https://www.facebook.com/dexignzone" target="_blank"><i className="fa-brands fa-facebook-f" /></Link></li>
+                                            <li><Link to="https://www.x.com/dexignzone" target="_blank"><i className="fa-brands fa-x-twitter" /></Link></li>
                                         </ul>
                                     </div>
                                 </div>
