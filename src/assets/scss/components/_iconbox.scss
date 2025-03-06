@@ -889,7 +889,8 @@
 			top: 0;
 			left: 0;
 			z-index: -1;
-			mask-image: url(../../src/assets/images/bg01.svg);
+			mask-image: url(/src/assets/images/bg01.svg);
+			// mask-image: url(../../src/assets/images/bg01.svg);
 			mask-position: right bottom;
 			border-radius: 20px 20px 0 20px;
 			@include transitionMedium;
